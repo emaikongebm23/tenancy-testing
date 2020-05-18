@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Listeners\ConfigureMultipleDatabase;
 use App\Listeners\ConfigureTenantConnection;
+use App\Listeners\ConfigureTenantMigrations;
 use App\Listeners\CreateCustomer;
 use App\Listeners\ResolveTenantConnection;
 use Illuminate\Auth\Events\Registered;
@@ -12,6 +13,7 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 use Tenancy\Affects\Connections\Events\Drivers\Configuring as ConfiguringConnection;
 use Tenancy\Affects\Connections\Events\Resolving;
 use Tenancy\Hooks\Database\Events\Drivers\Configuring as ConfiguringDatabase;
+use Tenancy\Hooks\Database\Events\Drivers\Created;
 use Tenancy\Hooks\Migration\Events\ConfigureMigrations;
 
 class EventServiceProvider extends ServiceProvider
@@ -24,7 +26,6 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         ConfiguringDatabase::class => [
             CreateCustomer::class,
-            ConfigureMultipleDatabase::class
         ],
         Resolving::class => [
             ResolveTenantConnection::class,
@@ -33,7 +34,9 @@ class EventServiceProvider extends ServiceProvider
             ConfigureTenantConnection::class,
         ],
         ConfigureMigrations::class => [
-        ]
+            ConfigureTenantMigrations::class
+        ],
+        
     ];
 
     /**

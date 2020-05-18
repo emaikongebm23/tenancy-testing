@@ -2,6 +2,7 @@
 
 use App\Customer;
 use Illuminate\Support\Facades\Route;
+use Tenancy\Hooks\Database\Events\Drivers\Created;
 
 /*
 |--------------------------------------------------------------------------
