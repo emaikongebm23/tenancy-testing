@@ -11,7 +11,7 @@ class Customer extends Model implements Tenant
 {
     use AllowsTenantIdentification;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'password', 'email'];
 
     protected $dispatchesEvents = [
         'created' => Events\Created::class,

@@ -8,6 +8,7 @@ class ConfigureTenantMigrations
 {
     public function handle(ConfigureMigrations $event)
     {
-        $event->path(database_path('migrations/tenant'));
+        if (isset($event->event->tenant))
+            $event->path(database_path('migrations/tenant'));
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Customer;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 use Tenancy\Hooks\Database\Events\Drivers\Created;
 
@@ -16,8 +17,11 @@ use Tenancy\Hooks\Database\Events\Drivers\Created;
 */
 
 Route::get('/', function () {
+    $password = Hash::make('secret');
     $customer = Customer::create([
-        'name' => 'test'
+        'name' => 'test',
+        'password' => $password,
+        'email' => 'testing@just.com'
     ]);
     return view('welcome');
 });
