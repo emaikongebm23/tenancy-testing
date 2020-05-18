@@ -17,11 +17,11 @@ use Tenancy\Hooks\Database\Events\Drivers\Created;
 */
 
 Route::get('/', function () {
-    $password = Hash::make('secret');
-    $customer = Customer::create([
-        'name' => 'test',
-        'password' => $password,
-        'email' => 'testing@just.com'
-    ]);
     return view('welcome');
 });
+
+Route::resource('customers','CustomerController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

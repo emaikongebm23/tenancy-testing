@@ -15,6 +15,7 @@
         "laravel/framework": "^7.0",
         "laravel/passport": "^9.2",
         "laravel/tinker": "^2.0",
+        "laravel/ui": "^2.0",
         "tenancy/db-driver-mysql": "^1.0",
         "tenancy/framework": "^1.0",
         "tenancy/hooks-database": "^1.0",
