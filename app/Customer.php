@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 use Tenancy\Identification\Concerns\AllowsTenantIdentification;
 use Tenancy\Identification\Contracts\Tenant;
 use Tenancy\Tenant\Events;
+use Illuminate\Foundation\Auth\User;
 
-class Customer extends Model implements Tenant
+class Customer extends User implements Tenant
 {
     use AllowsTenantIdentification;
 

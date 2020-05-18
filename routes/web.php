@@ -24,4 +24,8 @@ Route::resource('customers','CustomerController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/login', 'AuthController@index')->name('loginGet');
+Route::post('/login', 'AuthController@checkLogin')->name('loginPost');
+Route::post('/logout', 'AuthController@logout')->name('logout');
+
+
