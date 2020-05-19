@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88ce25381e436c587dcb25b9abfff566",
+    "content-hash": "4668ef943bd0e88117894a136587485f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4494,6 +4494,104 @@
                 "affects",
                 "connections",
                 "tenancy"
+            ],
+            "time": "2020-05-03T15:39:56+00:00"
+        },
+        {
+            "name": "tenancy/affects-routes",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tenancy/affects-routes.git",
+                "reference": "e6b52dba551d109c608d2dcadb3d7574e6b36c39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tenancy/affects-routes/zipball/e6b52dba551d109c608d2dcadb3d7574e6b36c39",
+                "reference": "e6b52dba551d109c608d2dcadb3d7574e6b36c39",
+                "shasum": ""
+            },
+            "require": {
+                "tenancy/framework": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tenancy\\Affects\\Routes\\Provider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tenancy\\Affects\\Routes\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arlon Antonius",
+                    "email": "opensource@arlon.dev",
+                    "homepage": "https://arlon.dev"
+                }
+            ],
+            "description": "The tenancy/tenancy routes mutations",
+            "keywords": [
+                "affects",
+                "routes",
+                "tenancy"
+            ],
+            "time": "2020-05-03T15:39:56+00:00"
+        },
+        {
+            "name": "tenancy/affects-views",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tenancy/affects-views.git",
+                "reference": "c9e4cdc9a1a495e8cbc89b7fa08e1db880830c38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tenancy/affects-views/zipball/c9e4cdc9a1a495e8cbc89b7fa08e1db880830c38",
+                "reference": "c9e4cdc9a1a495e8cbc89b7fa08e1db880830c38",
+                "shasum": ""
+            },
+            "require": {
+                "tenancy/framework": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tenancy\\Affects\\Views\\Provider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tenancy\\Affects\\Views\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arlon Antonius",
+                    "email": "opensource@arlon.dev",
+                    "homepage": "https://arlon.dev"
+                }
+            ],
+            "description": "The tenancy/tenancy views mutations",
+            "keywords": [
+                "affects",
+                "tenancy",
+                "views"
             ],
             "time": "2020-05-03T15:39:56+00:00"
         },
